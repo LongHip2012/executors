@@ -1,0 +1,677 @@
+<!DOCTYPE html><html lang="en"><head>
+	<!-- Open Graph Meta Tags (for Discord & Messenger Embed Preview) -->
+    <meta property="og:title" content="Lonely Hub | Executors">
+    <meta property="og:description" content="Roblox executor download here.">
+    <meta property="og:url" content="https://https://longhip2012.github.io/executors">
+    <meta property="og:image" content="https://i.imgur.com/mLmG0Bi.jpeg">
+    <meta property="og:image:width" content="64">
+    <meta property="og:image:height" content="64">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Lonely Hub">
+
+    <!-- Twitter Meta Tags (Also works with Messenger) -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Lonely Hub | Executors">
+    <meta name="twitter:description" content="Roblox supported executor download here.">
+    <meta name="twitter:image" content="https://i.imgur.com/mLmG0Bi.jpeg">
+
+    <!-- Theme Color for Embed -->
+    <meta name="theme-color" content="#000000">
+
+	<!-- Favicon -->
+    <link rel="icon" href="images/https://i.imgur.com/mLmG0Bi.jpeg" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox Executors - Download List</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0d1117;
+            color: #ffffff;
+            text-align: center;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            background: #161b22;
+            box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            margin-top: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .container:hover {
+            transform: scale(1.02);
+        }
+        h1 {
+            color: #58a6ff;
+            font-weight: 600;
+        }
+        .search-bar {
+            width: 100%;
+            max-width: 500px;
+            padding: 12px;
+            margin: 20px auto;
+            border: 1px solid #444;
+            border-radius: 8px;
+            font-size: 16px;
+            background-color: #21262d;
+            color: #ffffff;
+            display: block;
+            transition: box-shadow 0.3s, transform 0.2s;
+        }
+        .search-bar:focus {
+            outline: none;
+            box-shadow: 0px 0px 10px rgba(88, 166, 255, 0.6);
+            transform: scale(1.02);
+        }
+        .executor-list {
+            list-style: none;
+            padding: 0;
+        }
+        .executor-item {
+            background: #21262d;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(88, 166, 255, 0.3);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+        }
+        .executor-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 0px 15px rgba(88, 166, 255, 0.6);
+        }
+        .executor-item a {
+            text-decoration: none;
+            color: #58a6ff;
+            font-weight: bold;
+        }
+        .executor-item .details {
+            display: none;
+            position: absolute;
+            background: rgba(0, 0, 0, 0.9);
+            color: #fff;
+            padding: 12px;
+            border-radius: 8px;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 300px;
+            text-align: left;
+            box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.2);
+            font-size: 14px;
+        }
+        .executor-item:hover .details {
+            display: block;
+        }
+        .filter-buttons {
+            margin: 20px 0;
+        }
+        .filter-btn {
+            padding: 12px 18px;
+            margin: 5px;
+            border: none;
+            border-radius: 8px;
+            background-color: #58a6ff;
+            color: white;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .filter-btn:hover {
+            background-color: #468ace;
+            transform: scale(1.1);
+        }
+        @media (max-width: 768px) {
+            .executor-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            .executor-item .details {
+                width: 80%;
+            }
+        }
+		.footer {
+			width: 100%;
+			text-align: center;
+			padding: 15px 0;
+			color: #fff;
+			position: relative;
+			bottom: 0;
+		}
+
+		body {
+			padding-top: 100px; /* Adjust this value based on your navbar height */
+		}
+
+    </style>
+    <script>
+        function filterExecutors(type) {
+            let pcSection = document.getElementById('pc-section');
+            let mobileSection = document.getElementById('mobile-section');
+            if (type === 'pc') {
+                pcSection.style.display = 'block';
+                mobileSection.style.display = 'none';
+            } else if (type === 'mobile') {
+                pcSection.style.display = 'none';
+                mobileSection.style.display = 'block';
+            } else {
+                pcSection.style.display = 'block';
+                mobileSection.style.display = 'block';
+            }
+        }
+        
+        function searchExecutors() {
+            let input = document.getElementById('search').value.toLowerCase();
+            let items = document.querySelectorAll('.executor-item');
+            
+            items.forEach(item => {
+                let text = item.textContent.toLowerCase();
+                if (text.includes(input)) {
+                    item.style.display = "flex";
+                } else {
+                    item.style.display = "none";
+                }
+            });
+        }
+    </script>
+	<style>
+        /* General navbar styles */
+        .navbar {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background-color: rgba(30, 30, 30, 0.95);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Logo and text */
+        .navbar h1 {
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            color: #fff;
+            gap: 10px;
+            cursor: pointer;
+            margin: 0;
+        }
+
+        .navbar h1 img {
+            width: 40px;
+            height: 40px;
+        }
+
+        /* Discord button */
+        .discord-button {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 18px;
+            background-color: #5865F2;
+            border-radius: 6px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.95em;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s, background-color 0.3s;
+            position: relative;
+            top: 0;
+            margin-top: 5px; /* Fix button getting cut off */
+        }
+
+        .discord-button img {
+            width: 18px;
+            height: 18px;
+        }
+
+        .discord-button:hover {
+            transform: translateY(-2px);
+            background-color: #4752C4;
+        }
+
+        /* Fix navbar overlap */
+        body {
+            padding-top: 80px !important; /* Ensures navbar doesn't cover content */
+            margin: 0;
+        }
+
+        /* Fix for smaller screens */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 10px;
+            }
+
+            .navbar h1 {
+                font-size: 1.5rem;
+            }
+
+            .discord-button {
+                font-size: 0.85em;
+                padding: 10px 16px;
+                margin-top: 3px;
+            }
+        }
+
+        /* Popup Background (Blurred for Windows 11 effect) */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(10px);
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.5s ease-in-out;
+            z-index: 9999;
+        }
+
+        /* Popup Box (Windows 11 Glassmorphic Effect) */
+        .popup-content {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+            box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            opacity: 0;
+            transform: scale(0.9);
+            animation: popupAppear 0.4s ease-in-out forwards;
+        }
+
+        /* Popup Title */
+        .popup-content h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        /* Popup Message */
+        .popup-content p {
+            font-size: 16px;
+            color: #e0e0e0;
+        }
+
+        /* Button (Windows 11 Style) */
+        .popup-content button {
+            margin-top: 15px;
+            padding: 10px 18px;
+            background: #0078D7;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .popup-content button:hover {
+            background: #005A9E;
+            transform: scale(1.05);
+        }
+
+        /* Smooth Fade-in Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Smooth Popup Appear Animation */
+        @keyframes popupAppear {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        /* Responsive for Mobile */
+        @media (max-width: 600px) {
+            .popup-content {
+                width: 95%;
+                padding: 15px;
+            }
+
+            .popup-content h2 {
+                font-size: 18px;
+            }
+
+            .popup-content p {
+                font-size: 14px;
+            }
+
+            .popup-content button {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+        }
+
+    </style>
+
+    <!-- Popup Styles -->
+    <style>
+        /* Popup Background */
+        .popup-container {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(10px);
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        
+        /* Popup Box (Glassmorphism) */
+        .popup-box {
+            background: rgba(30, 30, 30, 0.7); /* Transparent Black */
+            backdrop-filter: blur(20px); /* Glass Effect */
+            padding: 25px;
+            border-radius: 16px;
+            width: 420px;
+            text-align: center;
+            color: white;
+            box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transform: scale(0.9);
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+        
+        /* Fade-in & Scale Effect */
+        .popup-container.show {
+            display: flex;
+            opacity: 1;
+        }
+        
+        .popup-container.show .popup-box {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        /* Requirements List */
+        .requirement {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 12px;
+            margin: 8px 0;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+        
+        .requirement:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Popup Buttons */
+        .popup-buttons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .cancel-btn, .download-button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: transform 0.2s, background 0.3s, box-shadow 0.3s;
+        }
+        
+        /* Cancel Button */
+        .cancel-btn {
+            background: rgba(200, 200, 200, 0.3);
+            color: white;
+        }
+        
+        .cancel-btn:hover {
+            background: rgba(255, 255, 255, 0.5);
+            transform: scale(1.05);
+            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Download Button */
+        .download-button {
+            background: #0078D7;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .download-button:hover {
+            background: #005a9e;
+            transform: scale(1.05);
+            box-shadow: 0px 4px 10px rgba(0, 120, 215, 0.5);
+        }
+    </style>
+
+    <script>
+        function showPopup() {
+            document.getElementById("popup-note").style.display = "flex";
+        }
+
+        function closePopup() {
+            let popup = document.getElementById("popup-note");
+            popup.style.animation = "fadeOut 0.3s ease-in-out forwards";
+            setTimeout(() => {
+                popup.style.display = "none";
+            }, 300); // Hide after animation completes
+        }
+
+        window.onload = function() {
+            setTimeout(showPopup, 500); // Show after 0.5s delay
+        };
+
+        /* Smooth Fade-out Animation */
+        const style = document.createElement('style');
+        style.innerHTML = `
+            @keyframes fadeOut {
+                from { opacity: 1; transform: scale(1); }
+                to { opacity: 0; transform: scale(0.9); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+
+	
+	<script>
+		function isiOS() {
+			return /iPhone|iPad|iPod/i.test(navigator.userAgent);
+		}
+	
+		document.addEventListener("DOMContentLoaded", function () {
+			document.querySelectorAll(".executor-item.mobile a").forEach(link => {
+				if (isiOS()) {
+					if (link.href.includes("ArceusX.apk")) {
+						link.href = "https://spdmteam.com"; // iOS Link for Arceus X
+					}
+					if (link.href.includes("Delta.apk")) {
+						link.href = "https://deltaexploits.gg/delta-executor-ios"; // iOS Link for Delta
+					}
+					if (link.href.includes("CodeX.apk")) {
+						link.href = "https://codex.lol/ios"; // iOS Link for Codex
+					}
+				}
+			});
+		});
+	</script>
+    <script>
+        function goToMain() {
+            window.location.href = 'https://https://longhip2012.github.io/home/';
+        }
+    </script> 
+    
+    <script>
+        function openPopup1(event, executorName, downloadLink, requirements) {
+            event.preventDefault(); // Prevent direct download
+        
+            // Update Title & Description
+            document.querySelector("#downloadPopup h2").innerText = `Download Requirements for ${executorName}`;
+            document.querySelector("#downloadPopup p").innerText = `Before downloading ${executorName}, ensure you have the following installed:`;
+        
+            // Update Requirements List
+            let reqContainer = document.getElementById("popupRequirements");
+            reqContainer.innerHTML = ""; // Clear previous content
+            requirements.forEach(req => {
+                let reqItem = document.createElement("div");
+                reqItem.classList.add("requirement");
+                reqItem.innerHTML = `✅ <strong>${req.name}</strong> (${req.description}) <br> 
+                                     <a href="${req.link}" target="_blank">Download</a>`;
+                reqContainer.appendChild(reqItem);
+            });
+        
+            // Update Download Button
+            document.getElementById("popupDownloadButton").href = downloadLink;
+        
+            // Show Popup with Animation
+            let popup = document.getElementById("downloadPopup");
+            popup.classList.add("show");
+        }
+        
+        function closePopup1() {
+            let popup = document.getElementById("downloadPopup");
+            popup.classList.remove("show");
+        }
+    </script>        
+        
+</head>
+
+<body>
+	<nav class="navbar">
+        <h1 onclick="goToMain()">
+            <img src="https://i.imgur.com/mLmG0Bi.jpeg" alt="Icon">
+            LONELY HUB
+        </h1>
+    </nav>
+
+    <div id="popup-note" class="popup">
+        <div class="popup-content">
+            <h2>Note</h2>
+            <p>Lonely Hub supported most of all executors but these executors work best.<br>Work = 🟢<br>Down = 🔴</p>
+            <button onclick="closePopup()">Got it</button>
+        </div>
+    </div> 
+	
+    <div class="container">
+        <h1>Roblox Executors - Download List</h1>
+        <input type="text" id="search" class="search-bar" placeholder="Search executors..." onkeyup="searchExecutors()">
+        <div class="filter-buttons">
+            <button class="filter-btn" onclick="filterExecutors('all')">All</button>
+            <button class="filter-btn" onclick="filterExecutors('pc')">PC</button>
+            <button class="filter-btn" onclick="filterExecutors('mobile')">Mobile</button>
+        </div>
+        <div id="pc-section">
+            <h2>PC Executors</h2>
+            <ul class="executor-list">
+				<li class="executor-item pc">AWP -🟢
+					<a href="https://buyawp.gg/" target="_blank">Buy</a>
+					<div class="details">Paid executor with 99% UNC but stable.</div>
+				</li>
+				<li class="executor-item pc">Potassium -🟢
+					<a href="https://potassium.sellhub.cx/" target="_blank">Buy</a>
+					<div class="details">Cheapest paid executor with 99% UNC.</div>
+				</li>
+                <li class="executor-item pc">Swift -🟢<a href="Swift.exe">Download</a>
+                    <div class="details">Best free executor with high UNC (99% UNC).</div>
+                </li>
+                <li class="executor-item pc">Argon -🔴<a href="#">Download</a>
+                    <div class="details">One of the best free executor with 99% UNC.</div>
+                </li>
+                <li class="executor-item pc">Velocity -🟢<a href="https://gofile.io/d/QXR9XY" target="_blank">Download</a>
+                    <div class="details">A free executor with high UNC (98% UNC).</div>
+                </li>
+				<li class="executor-item pc">JJSploit -🟢<a href="jjsploit_8.14.1.msi">Download</a>
+                    <div class="details">A free executor with mid UNC (80-84% UNC) but stable. Still support Lonely Hub (exclude Main UI).</div>
+                </li>
+                <li class="executor-item">
+                    Xeno -🟢 
+                    <a href="#" onclick="openPopup1(event, 'Xeno', 'Xeno-v1.1.6.zip', [
+                        { name: 'Microsoft .NET 8.0 SDK (v8.0.100)', description: 'Required for core functionality', link: 'https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-8.0.100-windows-x64-installer' },
+                        { name: 'Visual C++ Redistributable 2015-2022', description: 'Needed for execution', link: 'https://aka.ms/vs/17/release/vc_redist.x64.exe' }
+                    ])">Download</a>
+                    <div class="details">A free executor with mid UNC (76-81% UNC) crashes quite a lot, not recommended. Not supported all functions of Lonely Hub anymore.</div>
+                </li>
+                <li class="executor-item">
+                    Cloudy -🟢 
+                    <a href="#" onclick="openPopup1(event, 'Cloudy', 'CloudyBootstrapper.exe', [
+                        { name: 'Microsoft .NET Framework 4.8', description: 'Required for core functionality', link: 'https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48' },
+                        { name: 'Visual C++ Redistributable 2015-2022', description: 'Needed for execution', link: 'https://aka.ms/vs/17/release/vc_redist.x64.exe' }
+                    ])">Download</a>
+                    <div class="details">A free executor with mid UNC (84% UNC). Still supports Lonely Hub (excluding Main UI).</div>
+                </li>
+            </ul>
+        </div>
+        <div id="mobile-section">
+			<h2>Mobile Executors</h2>
+			<ul class="executor-list">
+				<li class="executor-item mobile">ArceusX -🟢
+					<a href="https://spdmteam.com" target="_blank">Download</a>
+					<div class="details">Popular mobile executor with great compatibility. (iOS Support)</div>
+				</li>
+				<li class="executor-item mobile">KRNL -🟢
+					<a href="https://krnl.cat" target="_blank">Download</a>
+					<div class="details">Best mobile executor with many great features and a smooth interface. (Recommended)</div>
+				</li>
+				<li class="executor-item mobile">Delta -🟢
+					<a href="https://deltaexploits.gg/delta-executor-mobile" target="_blank">Download</a>
+					<div class="details">One of the best mobile executor. (iOS Support)</div>
+				</li>
+				<li class="executor-item mobile">Codex -🟢
+					<a href="https://codex.lol" target="_blank">Download</a>
+					<div class="details">One of the best mobile executor. (iOS Support)</div>
+				</li>
+				<li class="executor-item mobile">Fluxus -🟢
+					<a href="https://www.mediafire.com/file/scatsdqlyhoj7zh/Fluxus.apk/file" target="_blank">Download</a>
+					<div class="details">A great mobile executor.</div>
+				</li>
+                <li class="executor-item mobile">VegaX -🟢
+					<a href="https://www.mediafire.com/file/7lxjfvn4lxe6yya/VegaX.apk/file" target="_blank">Download</a>
+					<div class="details">A decent mobile executor but have long key expiration time (48h).</div>
+				</li>
+			</ul>
+		</div>		
+    </div>
+    <div id="downloadPopup" class="popup-container">
+        <div class="popup-box">
+            <h2>Download Requirements</h2>
+            <p>Before downloading, ensure you have the following installed:</p>
+            
+            <div id="popupRequirements"></div>
+    
+            <p>These components are required for proper functionality.</p>
+    
+            <div class="popup-buttons">
+                <button onclick="closePopup1()" class="cancel-btn">Cancel</button>
+                <a id="popupDownloadButton" class="download-button" href="#">Continue to Download</a>
+            </div>
+        </div>
+    </div>
+	<!-- Footer -->
+	<footer class="footer">
+		<p>© 2025 Lonely Hub. All rights reserved.</p>
+	</footer>      
+
+
+
+
+</body></html>
